@@ -162,7 +162,7 @@ func (pool *TxPool) journalTx(from common.Address, tx *types.Transaction) {
 }
 ```
 
-从上可看到，只有属于 local 账户的交易才会被记录。你又没有注意到，如果仅仅是这样的话，journal 文件是否会跟随本地交易而无限增长？答案是否定的，虽然无法实时从journal中移除交易。但是支持定期更新journal文件。
+从上可看到，只有属于 local 账户的交易才会被记录。你有没有注意到，如果仅仅是这样的话，journal 文件是否会跟随本地交易而无限增长？答案是否定的，虽然无法实时从journal中移除交易。但是支持定期更新journal文件。
 
 journal 并不是保存所有的本地交易以及历史，他仅仅是存储当前交易池中存在的本地交易。因此交易池会定期对 journal 文件执行 `rotate`，将交易池中的本地交易写入journal文件，并丢弃旧数据。
 
