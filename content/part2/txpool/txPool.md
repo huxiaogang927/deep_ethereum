@@ -37,7 +37,7 @@ weight: 20201
 
 ![ethereum-tx-pool-desgin](https://img.learnblockchain.cn/book_geth/image-20190616220718529.png)
 
-各个模块相互影响，其中最重要的的交易管理。这也是需要我们重点介绍的部分。
+各个模块相互影响，其中最重要的是交易管理。这也是需要我们重点介绍的部分。
 
 ### 交易池配置
 
